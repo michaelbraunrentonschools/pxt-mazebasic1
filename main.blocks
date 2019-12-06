@@ -1,0 +1,119 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="Lbdw*{j7weirN%e+tIsl">mySprite</variable><variable id="sTAj51{SE.SAo4.EP!ac">donut</variable><variable id=";p3^`s;Z*#[b1HU=0=Pd">sprite</variable><variable id="P^(|ErCx/W@e6$/2K`w!">otherSprite</variable><variable type="SpriteKindLegacy" id="]31%m8%u]Do3ODm[};-K">0Player</variable><variable type="SpriteKindLegacy" id="JMX:G8*7,w*N7O)_f/L`">1Food</variable><variable type="SpriteKindLegacy" id="ic`bRszo-pc}N~I7VKzL">2Enemy</variable><variable type="SpriteKindLegacy" id="sq*uX%#wYfirxo/:#m)g">3Projectile</variable></variables><block type="pxt-on-start" x="0" y="0"><statement name="HANDLER"><block type="gamesettilemap"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="map"><shadow type="tilemap_image_picker"><field name="img">img`
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 4 
+4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 4 
+4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 4 
+4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 4 
+4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 
+4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 
+4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 
+4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 c 7 7 7 7 7 7 7 7 7 7 7 7 4 
+4 7 7 7 c 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 
+4 7 7 7 c 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 
+4 7 7 7 c 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 
+4 7 7 7 c 7 7 7 7 7 7 7 c 7 7 7 7 7 7 7 7 7 c 7 7 7 7 7 7 7 7 4 
+4 7 7 7 c 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 4 
+4 7 7 7 c c c 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 4 
+4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 4 
+4 7 7 7 7 7 7 7 7 7 7 7 8 8 8 8 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 4 
+4 7 7 7 7 7 7 7 8 8 8 8 8 8 8 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 4 
+4 7 7 7 7 7 7 7 8 8 8 8 8 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 4 
+4 7 7 7 7 7 7 7 8 8 8 8 7 7 7 7 7 7 7 7 7 c 7 7 7 7 7 7 7 7 4 4 
+4 7 7 7 7 7 7 7 8 8 7 7 7 7 c 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 4 
+4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 4 
+4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 4 
+4 7 7 7 7 7 7 7 7 7 7 c 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 
+4 7 7 7 7 7 c c 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 
+4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 
+4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 
+4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 
+4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 
+4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 
+4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+`</field></shadow></value><next><block type="gamesettile"><comment id="undefined" pinned="false" h="120" w="332">when turned on, player cannot move to this color. there is a color texture to add to the orange</comment><value name="index"><shadow type="colorindexpicker"><field name="index">4</field></shadow></value><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+4 4 4 4 4 4 4 4 4 4 4 e e e e e 
+4 4 e 4 4 4 4 4 4 4 4 e 4 4 4 e 
+4 4 e 4 4 4 4 4 4 4 4 e 4 4 4 e 
+4 4 4 4 e e 4 4 4 4 4 e e 4 4 e 
+4 4 4 4 4 4 4 e e 4 4 4 e 4 4 e 
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 e 
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 e 
+4 4 4 4 4 e 4 4 4 4 4 4 4 4 4 4 
+4 4 4 4 4 e e e 4 4 4 4 4 4 4 e 
+4 4 4 e 4 4 4 4 4 4 4 4 4 4 4 e 
+4 4 4 4 4 4 4 4 4 4 4 4 e 4 4 4 
+4 4 4 4 4 4 4 e e 4 4 4 e 4 4 4 
+e 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+e 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+e 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+e e e e e e e 4 4 4 4 4 4 4 4 4 
+`</field></shadow></value><value name="wall"><shadow type="toggleOnOff"><field name="on">true</field></shadow></value><next><block type="gamesettile"><value name="index"><shadow type="colorindexpicker"><field name="index">7</field></shadow></value><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+7 7 7 7 5 5 7 7 7 7 7 7 7 5 7 7 
+7 7 7 7 5 5 7 7 7 7 7 7 7 5 7 7 
+7 7 7 5 5 5 7 7 7 7 7 7 7 5 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 5 5 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 5 5 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 5 5 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+7 7 5 5 7 7 7 7 7 7 7 7 5 5 7 7 
+7 7 5 7 7 7 7 7 7 7 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+`</field></shadow></value><value name="wall"><shadow type="toggleOnOff"><field name="on">false</field></shadow></value><next><block type="gamesettile"><value name="index"><shadow type="colorindexpicker"><field name="index">8</field></shadow></value><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+8 8 8 8 8 8 8 8 8 6 8 8 8 8 8 8 
+8 8 8 8 8 6 8 8 6 6 6 6 6 8 8 8 
+6 6 6 8 8 8 8 8 8 8 8 6 6 8 8 8 
+6 6 6 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 6 8 8 8 8 8 8 8 6 6 8 8 8 8 
+8 8 8 8 8 8 8 8 6 8 6 6 6 8 8 8 
+8 8 8 6 6 8 8 6 8 8 6 6 8 6 8 8 
+8 8 8 6 8 8 8 6 8 8 8 6 6 8 8 8 
+8 8 8 6 8 8 8 6 8 8 8 8 8 8 6 8 
+8 8 8 6 6 6 6 6 6 6 8 6 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 6 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 6 8 8 
+8 8 8 8 8 6 6 6 6 6 6 6 6 8 8 8 
+8 8 8 8 6 8 8 8 8 8 8 8 8 8 8 8 
+`</field></shadow></value><value name="wall"><shadow type="toggleOnOff"><field name="on">true</field></shadow></value><next><block type="gamesettile"><value name="index"><shadow type="colorindexpicker"><field name="index">10</field></shadow></value><value name="img"><shadow type="tile_image_picker"><field name="img">img`
+a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a 
+a 5 5 5 5 a a a a a 5 5 a a a a 
+a 5 a a a a a a a a a a 5 a a a 
+a 5 a a a a a a a a a a 5 a a a 
+a a a a a a a a a a a a 5 a a a 
+a a a a a a a a a a a 5 5 a a a 
+a a a a 5 5 5 a a a 5 a a a a a 
+a 5 5 5 5 a a a a a a a a a a a 
+a 5 a a a a a a a a a a a a a a 
+5 a a a a a a 5 a a a a a a a a 
+5 a a a a a a a 5 5 a a a 5 5 a 
+5 a a 5 a a a a a a 5 5 5 5 a a 
+a a a a 5 a a a a a a a a a a a 
+a a a a a 5 5 5 a a a a a a a a 
+a a a a a a a a a a a a a a a a 
+`</field></shadow></value><value name="wall"><shadow type="toggleOnOff"><field name="on">true</field></shadow></value><next><block type="variables_set"><field name="VAR" id="Lbdw*{j7weirN%e+tIsl">mySprite</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . f f 1 1 1 f . . . . . 
+. . . . f 1 1 1 1 1 1 1 . . . . 
+. . . f 1 1 1 1 1 1 1 1 f . . . 
+. . f 1 1 1 1 1 1 1 1 1 1 f . . 
+. . f 1 1 1 1 1 1 1 1 1 1 f . . 
+. f 1 1 1 1 1 1 1 1 1 1 1 1 f . 
+. f 1 1 f f 1 1 1 1 f f 1 1 f . 
+. f 1 1 f 1 f 1 1 f 1 f 1 1 f . 
+. f 1 1 1 1 f 1 1 f 1 1 1 1 f . 
+f f 1 1 f 1 1 1 1 1 1 f 1 1 f f 
+f 1 1 1 f f 1 1 1 1 f f f 1 1 f 
+. f 1 1 f 1 1 1 1 1 1 f 1 1 f . 
+. . 1 1 1 1 1 1 1 1 1 1 1 1 . . 
+. . 1 f 1 1 1 1 1 1 1 1 f 1 . . 
+. . . f f 1 1 1 1 1 1 f f . . . 
+. . . . . f f 1 1 f f . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritetype"><field name="MEMBER">0Player</field></shadow></value></block></value><next><block type="game_control_sprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><comment id="undefined" pinned="false" h="80" w="160">controls the sprite</comment><value name="sprite"><block type="variables_get"><field name="VAR" id="Lbdw*{j7weirN%e+tIsl">mySprite</field></block></value><next><block type="camerafollow"><comment id="undefined" pinned="false" h="98" w="354">camera follows sprite throughout game</comment><value name="sprite"><block type="variables_get"><field name="VAR" id="Lbdw*{j7weirN%e+tIsl">mySprite</field></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block></xml>
