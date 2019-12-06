@@ -4,6 +4,11 @@ enum SpriteKindLegacy {
     Enemy,
     Projectile
 }
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+    info.changeScoreBy(1)
+    mySprite2.setPosition(Math.randomRange(0, 512), Math.randomRange(0, 512))
+})
+let mySprite2: Sprite = null
 scene.setTileMap(img`
 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
 4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 4 
@@ -134,3 +139,25 @@ f 1 1 1 f f 1 1 1 1 f f f 1 1 f
 controller.moveSprite(mySprite)
 // camera follows sprite throughout game
 scene.cameraFollowSprite(mySprite)
+for (let index = 0; index < 1; index++) {
+    mySprite2 = sprites.create(img`
+. . . . . . . . . . . . . f f f f f . . . . . . . . . . . . . . 
+. . . . . . . . . . . . f d d b b f . . . . . . . . . . . . . . 
+. . . . . . . . . . . f d d b b f . . . . . . . . . . . . . . . 
+. . . . . . . . . . f f f b b f f . . . . . . . . . . . . f f f 
+. . . . f f f f f f f f f f f f f f . . . . . . . . . f f b b f 
+. . f f 1 1 1 1 b b b b b b b b b f f f f . . . . . f d b b f f 
+f f 1 1 1 1 1 1 b b b f b f b b b b c c c f f . . f d d b b f . 
+f 1 1 1 1 1 1 1 f f b b f b f b b b c c c c c f f f d b b f . . 
+f 1 1 1 1 1 1 1 f f 1 b f b f b b b c c c c c c c b b b f f . . 
+. f 1 1 1 1 1 1 1 1 1 b b b b b b c c c c c c c c c b f f f . . 
+. . f 1 1 1 1 1 c c 1 1 b b b b c c c c c c c c f f f b b f f . 
+. . . f 1 1 1 1 c 1 1 1 b b b c c c c c b d b c . . . f b b f . 
+. . . . f 1 1 c 1 1 1 c b b b f d d d d d c c . . . . . f b b f 
+. . . . . f f 1 1 1 1 f b d b b f d d c c . . . . . . . . f f f 
+. . . . . . . c c c c c f b d b b f c . . . . . . . . . . . . . 
+. . . . . . . . . . . . . f f f f f . . . . . . . . . . . . . . 
+`, SpriteKind.Food)
+    mySprite2.setPosition(Math.randomRange(0, 512), Math.randomRange(0, 512))
+}
+info.startCountdown(10)
